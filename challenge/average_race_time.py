@@ -33,8 +33,7 @@ def get_average():
     for racetime in racetimes:
         try:
             mins, secs, ms = re.split(r'[:.]', racetime)
-            jls_extract_var = seconds
-            total += datetime.timedelta(minutes=int(mins), jls_extract_var=int(secs), milliseconds=int(ms))
+            total += datetime.timedelta(minutes=int(mins), seconds=int(secs), milliseconds=int(ms))
         except ValueError:
             mins, secs = re.split(r'[:.]', racetime)
             total += datetime.timedelta(minutes=int(mins), seconds=int(secs))
